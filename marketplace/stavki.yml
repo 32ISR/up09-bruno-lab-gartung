@@ -1,0 +1,27 @@
+info:
+  name: stavki
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/items/:id/bids"
+  params:
+    - name: id
+      value: "1773298767887"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "amount": 85000
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3NzMyOTg3MDMxMTcsInVzZXJuYW1lIjoidGVzdHVzZXIxMCIsImlhdCI6MTc3NTEyMDk0MSwiZXhwIjoxNzc1MjA3MzQxfQ.rMSsWT44SUzSt73-79JqbIv-wikko2t2Z2uaj70Q2PY
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
